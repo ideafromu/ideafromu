@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IdeaFromU - Author Page</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      background: #f8f9fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: #0d6efd;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    header p {
+      margin: 0.5rem 0 0;
+      font-size: 1.1rem;
+    }
+    section {
+      padding: 2rem 10%;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      border-left: 4px solid #0d6efd;
+      padding-left: 8px;
+      color: #0d6efd;
+      margin-bottom: 1rem;
+    }
+    .author-box {
+      display: flex;
+      align-items: center;
+      background: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .author-box img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #0d6efd;
+    }
+    .books {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .book-card {
+      background: #fff;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      text-align: center;
+      transition: transform 0.2s;
+    }
+    .book-card:hover {
+      transform: translateY(-5px);
+    }
+    .book-card h3 {
+      margin: 0.5rem 0;
+      color: #0d6efd;
+    }
+    iframe {
+      width: 100%;
+      height: 700px;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .comment-box {
+      margin-top: 1rem;
+      background: #fff;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .comment {
+      border-bottom: 1px solid #eee;
+      padding: 0.5rem 0;
+    }
+    .comment:last-child {
+      border-bottom: none;
+    }
+    input, textarea, button {
+      width: 100%;
+      padding: 0.7rem;
+      margin: 0.5rem 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+    button {
+      background: #0d6efd;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #084298;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #0d6efd;
+      color: white;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to IdeaFromU</h1>
+    <p>Official Author Website – Sharing Ideas & Books</p>
+  </header>
+
+  <!-- About Author -->
+  <section>
+    <h2>About the Author</h2>
+    <div class="author-box">
+        <div style="text-align:center;">
+      <img src="author image .jpg" alt="Author Image">
+      <h3 style="margin-top:0.5rem; color:#0d6efd;">SHIVAM YADAV</h3>
+      </div>
+      <p>
+        Hello, I am the author of two thought-provoking books.  
+        My writing is inspired by **real-life experiences** and  
+        social reflections, aiming to bring awareness and spark change.  
+        Through this platform, you can connect with me, ask questions,  
+        and share your own perspectives.  
+      </p>
+    </div>
+
+    <div class="books">
+      <div class="book-card">
+        <a href="https://amzn.to/47R2QRo" target="_blank">
+      <img src="hair.jpg" alt="Book 1 Cover" style="width:120px;height:auto;border-radius:6px;">
+    </a>
+        <h3>You Are the Reason of Your Hair Loss</h3>
+        <p>Based on real-life experience, this book helps you understand  
+        how your habits affect your hair health.</p>
+          <a href="https://amzn.to/47R2QRo" target="_blank">
+      <button>Buy on Amazon</button>
+    </a>
+      </div>
+      <div class="book-card">
+         <a href="https://amzn.to/3USAFKs" target="_blank">
+      <img src="society.png" alt="Book 2 Cover" style="width:120px;height:auto;border-radius:6px;">
+    </a>
+        <h3>Society Killed Many, You Might Be Next</h3>
+        <p>A strong social commentary exposing the harsh truths  
+        of our society and its silent killers.</p>
+         <a href="https://amzn.to/3USAFKs" target="_blank">
+      <button>Buy on Amazon</button>
+    </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section>
+    <h2>Contact Me</h2>
+    <!-- Paste your Google Form Embed Code below -->
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScFwE16LQHcWarDvla9nbMy1ZcDMHzBmtV7Zd114PhMfhtzwg/viewform?embedded=true" width="640" height="915" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>" 
+  </section>
+
+  <!-- Comments -->
+  <section>
+    <h2>Comments</h2>
+    <form onsubmit="addComment(event)">
+      <input type="text" id="commentName" placeholder="Your Name" required>
+      <textarea id="commentText" rows="3" placeholder="Write your comment..." required></textarea>
+      <button type="submit">Post Comment</button>
+    </form>
+
+    <div class="comment-box" id="commentsList">
+      <p><em>No comments yet. Be the first!</em></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 IdeaFromU | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    // Simple comment system (local only)
+    function addComment(event) {
+      event.preventDefault();
+      let name = document.getElementById("commentName").value;
+      let text = document.getElementById("commentText").value;
+
+      let commentsList = document.getElementById("commentsList");
+      if (commentsList.querySelector("em")) {
+        commentsList.innerHTML = "";
+      }
+
+      let div = document.createElement("div");
+      div.classList.add("comment");
+      div.innerHTML = `<strong>${name}</strong><p>${text}</p>`;
+      commentsList.prepend(div);
+
+      event.target.reset();
+    }
+  </script>
+</body>
+</html>
