@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ideafromu - Ideas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+     <div class="logo">
+      <img src="favicon.png" alt="Logo"> IdeaFromU
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="ideas.html" class="active">Solutions</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Ideas Section -->
+<section class="page">
+  <h1>Ideas</h1>
+  <div id="posts" class="posts"></div>
+</section>
+
+<script>
+  // Load posts from posts.json
+  fetch("posts.json")
+    .then(response => response.json())
+    .then(posts => {
+      const postsContainer = document.getElementById("posts");
+      posts.forEach(post => {
+        const card = document.createElement("div");
+        card.classList.add("post-card");
+        card.innerHTML = `
+          <h2>${post.title}</h2>
+          <p><strong>Author:</strong> ${post.author}</p>
+          <p><em>${post.status}</em></p>
+          <p>${post.content}</p>
+        `;
+        postsContainer.appendChild(card);
+      });
+    })
+    .catch(error => console.error("Error loading posts:", error));
+</script>
+
+
+</body>
+</html>

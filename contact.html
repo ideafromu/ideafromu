@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ideafromu - Contact</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+     <div class="logo">
+      <img src="favicon.png" alt="Logo"> IdeaFromU
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="ideas.html">Solutions</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Contact -->
+  <section class="page">
+    <h1>Contact Me</h1>
+    <form action="https://formspree.io/f/xwpnwbnl" method="POST" class="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="_replyto" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Write your message..." required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+</body>
+</html>
