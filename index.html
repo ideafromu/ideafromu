@@ -1,210 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Favicon -->
-<link rel="icon" type="image/png" href="favicon.png">
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IdeaFromU - Author Page</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Arial, sans-serif;
-      margin: 0;
-      background: #f8f9fa;
-      color: #333;
-      line-height: 1.6;
-    }
-    header {
-      background: #0d6efd;
-      color: white;
-      text-align: center;
-      padding: 2rem 1rem;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
-    }
-    header p {
-      margin: 0.5rem 0 0;
-      font-size: 1.1rem;
-    }
-    section {
-      padding: 2rem 10%;
-      max-width: 1000px;
-      margin: auto;
-    }
-    h2 {
-      border-left: 4px solid #0d6efd;
-      padding-left: 8px;
-      color: #0d6efd;
-      margin-bottom: 1rem;
-    }
-    .author-box {
-      display: flex;
-      align-items: center;
-      background: white;
-      padding: 1.5rem;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      gap: 1.5rem;
-      flex-wrap: wrap;
-    }
-    .author-box img {
-      width: 150px;
-      height: 150px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 3px solid #0d6efd;
-    }
-    .books {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
-      margin-top: 1.5rem;
-    }
-    .book-card {
-      background: #fff;
-      padding: 1rem;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-      text-align: center;
-      transition: transform 0.2s;
-    }
-    .book-card:hover {
-      transform: translateY(-5px);
-    }
-    .book-card h3 {
-      margin: 0.5rem 0;
-      color: #0d6efd;
-    }
-    iframe {
-      width: 100%;
-      height: 700px;
-      border: none;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    .comment-box {
-      margin-top: 1rem;
-      background: #fff;
-      padding: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    .comment {
-      border-bottom: 1px solid #eee;
-      padding: 0.5rem 0;
-    }
-    .comment:last-child {
-      border-bottom: none;
-    }
-    input, textarea, button {
-      width: 100%;
-      padding: 0.7rem;
-      margin: 0.5rem 0;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 1rem;
-    }
-    button {
-      background: #0d6efd;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
-    button:hover {
-      background: #084298;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background: #0d6efd;
-      color: white;
-      margin-top: 2rem;
-    }
-  </style>
+  <title>Ideafromu - Home</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Welcome to IdeaFromU</h1>
-    <p>Official Author Website – Sharing Ideas & Books</p>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="favicon.png" alt="Logo"> IdeaFromU
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="ideas.html">Solutions</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <!-- About Author -->
-  <section>
-    <h2>About the Author</h2>
+  <!-- Home Content -->
+  <section class="page">
+    <h1>Welcome to Ideafromu</h1>
+    <p style="text-align:center;">Official Author Website – Sharing Ideas & Books</p>
+
     <div class="author-box">
-        <div style="text-align:center;">
-      <img src="author image .jpg" alt="Author Image">
-      <h3 style="margin-top:0.5rem; color:#0d6efd;">SHIVAM YADAV</h3>
+      <div style="text-align:center;">
+        <img src="author .jpg" alt="Author Image">
+        <h3>SHIVAM YADAV</h3>
       </div>
       <p>
         Hello, I am the author of two thought-provoking books.  
-        My writing is inspired by **real-life experiences** and  
+        My writing is inspired by real-life experiences and  
         social reflections, aiming to bring awareness and spark change.  
-        Through this platform, you can connect with me, ask questions,  
-        and share your own perspectives.  
       </p>
     </div>
 
     <div class="books">
       <div class="book-card">
-        <a href="https://amzn.to/47R2QRo" target="_blank">
-      <img src="hair.jpg" alt="Book 1 Cover" style="width:120px;height:auto;border-radius:6px;">
-    </a>
-        <h3>You Are the Reason for Your Hair Loss</h3>
-        <p>Based on real-life experience, why spend thousands when simple habits can save your hair?.</p>
-          <a href="https://amzn.to/47R2QRo" target="_blank">
-      <button>Buy on Amazon</button>
-    </a>
+        <img src="hair.jpg" alt="Hair Book">
+        <h3>You Are the Reason of Your Hair Loss</h3>
+        <p>Based on real-life experience, this book helps you understand how your habits affect your hair health.</p>
+        <a href="https://amzn.to/47ZRQRo" target="_blank"><button>Buy on Amazon</button></a>
       </div>
       <div class="book-card">
-         <a href="https://amzn.to/3USAFKs" target="_blank">
-      <img src="society.png" alt="Book 2 Cover" style="width:120px;height:auto;border-radius:6px;">
-    </a>
+        <img src="society.png" alt="Society Book">
         <h3>Society Killed Many, You Might Be Next</h3>
-        <p>Before society kills your spirit,learn how to stay unshakable.</p>
-         <a href="https://amzn.to/3USAFKs" target="_blank">
-      <button>Buy on Amazon</button>
-    </a>
+        <p>A strong social commentary exposing the harsh truths of our society and its silent killers.</p>
+        <a href="https://amzn.to/3U5AFKs" target="_blank"><button>Buy on Amazon</button></a>
       </div>
     </div>
+
+    <!-- Comments -->
+    <h2 style="margin-top:40px;">Comments</h2>
+    <div id="disqus_thread"></div>
+    <script>
+      var disqus_config = function () {
+        this.page.url = window.location.href;  
+        this.page.identifier = "homepage"; 
+      };
+      (function() { 
+        var d = document, s = d.createElement('script');
+        s.src = 'https://ideafromu.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the 
+      <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+    </noscript>
   </section>
 
-  <!-- Contact -->
-  <section>
-    <h2>Contact Me</h2>
-    <!-- Paste your Google Form Embed Code below -->
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScFwE16LQHcWarDvla9nbMy1ZcDMHzBmtV7Zd114PhMfhtzwg/viewform?embedded=true" width="640" height="915" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>" 
-  </section>
-
-   <!-- Comments -->
-    <section id="comments">
-      <h1>Comments</h1>
-      <div id="disqus_thread"></div>
-      <script>
-        var disqus_config = function () {
-          this.page.url = window.location.href;  
-          this.page.identifier = "homepage"; 
-        };
-        (function() { 
-          var d = document, s = d.createElement('script');
-          s.src = 'https://ideafromu.disqus.com/embed.js';
-          s.setAttribute('data-timestamp', +new Date());
-          (d.head || d.body).appendChild(s);
-        })();
-      </script>
-      <noscript>
-        Please enable JavaScript to view the 
-        <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-      </noscript>
-    </section>
-
-
-  <footer>
-    <p>&copy; 2025 IdeaFromU | All Rights Reserved</p>
-  </footer>
+  <script id="dsq-count-scr" src="//ideafromu.disqus.com/count.js" async></script>
 </body>
 </html>
-
