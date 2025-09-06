@@ -22,6 +22,68 @@ h1, h2 {
 /* Navbar */
 /* Navbar */
 /* Navbar */
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  padding: 10px 20px;
+}
+
+/* Logo stays on the left */
+.navbar .logo {
+  display: flex;
+  align-items: center;
+}
+
+/* Nav menu container */
+.navbar nav {
+  flex: 1; /* take available space */
+  display: flex;
+  justify-content: center; /* center the menu */
+}
+
+/* Nav links */
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 5px 10px;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+  color: #0d6efd;
+  border-bottom: 2px solid #0d6efd;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar nav {
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;   /* logo left, menu center */
@@ -219,3 +281,4 @@ h1, h2 {
 .contact-form button:hover {
   background: #0b5ed7;
 }
+
