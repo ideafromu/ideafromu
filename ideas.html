@@ -25,36 +25,37 @@
   <!-- Ideas Section -->
 <section class="page">
   <h1>Ideas</h1>
-  <div id="posts" class="posts"></div>
+  <div id="posts"></div>
 </section>
 
 <script>
-  // Load posts from posts.json
   fetch("posts.json")
-    .then(response => response.json())
+    .then(res => res.json())
     .then(posts => {
-      const postsContainer = document.getElementById("posts");
-      posts.forEach(post => {
-        const card = document.createElement("div");
-        card.classList.add("post-card");
-        card.innerHTML = `
+      const container = document.getElementById("posts");
+      container.innerHTML = posts.map(post => `
+        <div class="post-card">
           <h2>${post.title}</h2>
-          <p><strong>Author:</strong> ${post.author}</p>
-          <p><em>${post.status}</em></p>
-          <p>${post.content}</p>
-          <a href="${post.link}" target="_blank">Buy on Amazon</a>
-        `;
-        postsContainer.appendChild(card);
-      });
+          <div class="author">Author: ${post.author}</div>
+          <p class="status"><i>${post.status}</i></p>
+          <p>${post.content.replace(/\n/g, "<br>")}</p>
+          ${post.link ? `<a href="${post.link}" target="_blank" class="btn">Buy on Amazon</a>` : ""}
+        </div>
+      `).join("");
     })
-    .catch(error => console.error("Error loading posts:", error));
+    .catch(err => {
+      document.getElementById("posts").innerHTML = "<p>⚠️ Failed to load posts.</p>";
+      console.error(err);
+    });
 </script>
+
 <footer class="footer">
   <p>© 2025 Ideafromu. All Rights Reserved. | Designed by Shivam Yadav</p>
 </footer>
 
 </body>
 </html>
+
 
 
 
